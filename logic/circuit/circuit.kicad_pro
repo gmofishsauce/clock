@@ -431,7 +431,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "logic.kicad_pro",
+    "filename": "circuit.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -564,7 +564,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "/Users/jeff/Desktop/",
+    "plot_directory": "",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -576,8 +576,12 @@
   },
   "sheets": [
     [
-      "4078bfcf-e5c1-4f0e-b66f-b232c5a6fa8f",
+      "4e7972a6-4c93-47ae-8eaf-65600ab1cd9d",
       "Root"
+    ],
+    [
+      "4fae346b-7d79-4338-9ce4-7728e9034208",
+      "display"
     ]
   ],
   "text_variables": {}
