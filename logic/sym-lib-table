@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "arduino-library")(type "KiCad")(uri "/Users/jeff/go/src/github.com/arduino-kicad-library/symbols/arduino-library.kicad_sym")(options "")(descr ""))
   (lib (name "nixies-us")(type "KiCad")(uri "/Users/jeff/go/src/github.com/judge2005/Eagle-and-KiCAD-Nixie-Libs/nixies-us.kicad_sym")(options "")(descr ""))
+  (lib (name "5536437-4")(type "KiCad")(uri "/Users/jeff/Downloads/LIB_5536437-4/5536437-4/KiCad/5536437-4.kicad_sym")(options "")(descr ""))
+  (lib (name "NixComp")(type "KiCad")(uri "${KIPRJMOD}/NixComp.kicad_sym")(options "")(descr ""))
 )
