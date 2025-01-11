@@ -18790,7 +18790,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "NixComp:NCH8200HV"
 			(at 38.1 78.74 0)
 			(effects
 				(font
