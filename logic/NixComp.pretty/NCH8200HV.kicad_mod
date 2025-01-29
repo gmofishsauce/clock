@@ -115,7 +115,7 @@
 		(uuid "caa5eb74-23b0-4bd3-baf0-f303ec7902ee")
 	)
 	(pad "8" thru_hole circle
-		(at 7.62 5.08)
+		(at 7.62 0)
 		(size 1.524 1.524)
 		(drill 0.762)
 		(layers "*.Cu" "*.Mask")
