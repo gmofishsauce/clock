@@ -4,7 +4,7 @@
 	(generator_version "8.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at 0 -0.5 0)
+		(at 0 2.54 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "d43fa045-5a3e-479a-a6a1-17ca3a136d67")
@@ -16,7 +16,7 @@
 		)
 	)
 	(property "Value" "NCH8200HV"
-		(at 0 1 0)
+		(at 0 12.7 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "c615f48d-c162-42b9-afe7-9581ba42937e")
@@ -28,7 +28,7 @@
 		)
 	)
 	(property "Footprint" ""
-		(at 0 0 0)
+		(at -12.7 10.16 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -41,7 +41,7 @@
 		)
 	)
 	(property "Datasheet" ""
-		(at 0 0 0)
+		(at -12.7 10.16 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -54,7 +54,7 @@
 		)
 	)
 	(property "Description" ""
-		(at 0 0 0)
+		(at -12.7 10.16 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -68,8 +68,8 @@
 	)
 	(attr through_hole)
 	(fp_rect
-		(start -9 -9.05)
-		(end 9.08 6.63)
+		(start -10.039896 -7.089948)
+		(end 10.16 10.899948)
 		(stroke
 			(width 0.12)
 			(type default)
@@ -79,7 +79,7 @@
 		(uuid "1aec4da6-3de1-4088-83c1-8923589f338f")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 2.5 0)
+		(at 0 15.24 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "0e344da0-2011-418f-a8e4-b98bbf3a3b13")
@@ -90,36 +90,36 @@
 			)
 		)
 	)
-	(pad "5" thru_hole circle
-		(at -7.62 -7.5876)
+	(pad "1" thru_hole circle
+		(at -7.62 -5.08)
 		(size 1.524 1.524)
 		(drill 0.762)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "06dc19ad-c8ed-405e-8dbf-17562eacbea8")
+		(uuid "16ecdcc8-61c2-42a4-868e-ef45a8f0c06b")
 	)
-	(pad "6" thru_hole circle
-		(at 7.62 -7.62)
+	(pad "2" thru_hole circle
+		(at -7.62 2.54)
 		(size 1.524 1.524)
 		(drill 0.762)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "e8b8445a-5de2-42a2-a26f-6cb360d4398c")
+		(uuid "c24d2782-a483-4957-b35c-8c44a8769423")
 	)
-	(pad "7" thru_hole circle
-		(at -7.62 0.04)
+	(pad "3" thru_hole circle
+		(at 7.62 2.54)
 		(size 1.524 1.524)
 		(drill 0.762)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "caa5eb74-23b0-4bd3-baf0-f303ec7902ee")
+		(uuid "c983f677-8248-4fae-ba8e-e8aa51b0c864")
 	)
-	(pad "8" thru_hole circle
-		(at 7.62 0)
+	(pad "4" thru_hole circle
+		(at 7.62 -5.08)
 		(size 1.524 1.524)
 		(drill 0.762)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "758bfd19-11a3-4c7c-8a96-bac0534dc433")
+		(uuid "3dac4894-0795-4899-8963-a2331a5476b2")
 	)
 )
