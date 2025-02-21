@@ -1,4 +1,4 @@
 (sym_lib_table
   (version 7)
-  (lib (name "NixComp")(type "KiCad")(uri "/Users/jeff/go/src/github.com/gmofishsauce/clock/logic/NixComp.kicad_sym")(options "")(descr ""))
+  (lib (name "NixComp")(type "KiCad")(uri "${KIPRJMOD}/../lib/NixComp.kicad_sym")(options "")(descr ""))
 )
