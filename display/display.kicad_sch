@@ -9468,7 +9468,7 @@
 				)
 			)
 		)
-		(property "Footprint" "hatsunearu:IN_12B_Socket"
+		(property "Footprint" "NixComp:IN_12B_Socket"
 			(at 246.38 31.75 0)
 			(effects
 				(font
@@ -9566,7 +9566,7 @@
 				)
 			)
 		)
-		(property "Footprint" "hatsunearu:IN_12B_Socket"
+		(property "Footprint" "NixComp:IN_12B_Socket"
 			(at 162.56 31.75 0)
 			(effects
 				(font
@@ -10294,7 +10294,7 @@
 				)
 			)
 		)
-		(property "Footprint" "hatsunearu:IN_12B_Socket"
+		(property "Footprint" "NixComp:IN_12B_Socket"
 			(at 77.47 31.75 0)
 			(effects
 				(font
@@ -10392,7 +10392,7 @@
 				)
 			)
 		)
-		(property "Footprint" "hatsunearu:IN_12B_Socket"
+		(property "Footprint" "NixComp:IN_12B_Socket"
 			(at 35.56 31.75 0)
 			(effects
 				(font
@@ -10490,7 +10490,7 @@
 				)
 			)
 		)
-		(property "Footprint" "hatsunearu:IN_12B_Socket"
+		(property "Footprint" "NixComp:IN_12B_Socket"
 			(at 120.65 31.75 0)
 			(effects
 				(font
@@ -10726,7 +10726,7 @@
 				)
 			)
 		)
-		(property "Footprint" "hatsunearu:IN_12B_Socket"
+		(property "Footprint" "NixComp:IN_12B_Socket"
 			(at 204.47 31.75 0)
 			(effects
 				(font
