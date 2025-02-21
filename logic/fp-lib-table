@@ -1,5 +1,5 @@
 (fp_lib_table
   (version 7)
-  (lib (name "NixComp")(type "KiCad")(uri "/Users/jeff/go/src/github.com/gmofishsauce/clock/lib/NixComp.pretty")(options "")(descr ""))
-  (lib (name "arduino-library")(type "KiCad")(uri "/Users/jeff/go/src/github.com/gmofishsauce/clock/lib/arduino-library.pretty")(options "")(descr ""))
+  (lib (name "NixComp")(type "KiCad")(uri "${KIPRJMOD}/../lib/NixComp.pretty")(options "")(descr ""))
+  (lib (name "arduino-library")(type "KiCad")(uri "${KIPRJMOD}/../lib/arduino-library.pretty")(options "")(descr ""))
 )
