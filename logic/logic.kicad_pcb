@@ -1754,6 +1754,145 @@
 			)
 		)
 	)
+	(footprint "NixComp:TR4R7"
+		(layer "F.Cu")
+		(uuid "2c83e693-347c-4178-893c-a81058bffe86")
+		(at 217.33 90.46)
+		(property "Reference" "U10"
+			(at 0 -0.5 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "671bb493-6b12-44fb-9055-47d84b70ec67")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 0 1 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "f96e7be0-f1ed-468d-9c5a-f92a717069d0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "NixComp:TR4R7"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8a90dd56-65b5-4915-a6f3-348aefb9fe9a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "26bb6c32-f92f-4406-94e0-478ceaee36a3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "6.5+ => 5v regulated buck converter"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d480b630-ad6f-4fda-bfdb-e5da4bf00c86")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/dd7c5575-8670-444b-9e4c-ee2bf6df6fb3")
+		(sheetname "Root")
+		(sheetfile "logic.kicad_sch")
+		(attr through_hole)
+		(fp_rect
+			(start -5.2578 -8.255)
+			(end 5.2578 8.2296)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "edeb593f-c945-48e5-99cd-88272280ae54")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 2.5 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "264336fc-b810-4996-8e5a-2ec400bc82a8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at -4.2672 -7.2644)
+			(size 1.524 1.524)
+			(drill 0.762)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 91 "Net-(J4-Pin_10)")
+			(pinfunction "IN+")
+			(pintype "power_in")
+			(uuid "851596d6-4b94-4d46-afca-a369006e0058")
+		)
+		(pad "2" thru_hole circle
+			(at -4.2672 7.239)
+			(size 1.524 1.524)
+			(drill 0.762)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 87 "LV_REG")
+			(pinfunction "5v")
+			(pintype "power_out")
+			(uuid "4b42b915-3b84-4d98-b669-ef8e583bd9bd")
+		)
+		(pad "3" thru_hole circle
+			(at 4.2672 7.239)
+			(size 1.524 1.524)
+			(drill 0.762)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 23 "GND")
+			(pinfunction "GND")
+			(pintype "power_in")
+			(uuid "28f43899-1d1b-4bb6-aada-ed19df0d5773")
+		)
+		(pad "4" thru_hole circle
+			(at 4.2672 -7.2644)
+			(size 1.524 1.524)
+			(drill 0.762)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 23 "GND")
+			(pinfunction "IN-")
+			(pintype "power_in")
+			(uuid "f81c543f-5117-4456-937f-5b1a88aa8929")
+		)
+	)
 	(footprint "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm"
 		(layer "F.Cu")
 		(uuid "2ef7adf0-e461-4d14-89f0-6ca358400556")
@@ -2508,311 +2647,6 @@
 			(uuid "cf7a70e7-bde9-421b-bc26-17ec1e19d736")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Disc_D3.4mm_W2.1mm_P2.50mm.wrl"
-			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
-	(footprint "Package_TO_SOT_THT:TO-220-3_Vertical"
-		(layer "F.Cu")
-		(uuid "390b8cb9-1b40-42bb-8d45-dc17d15b438c")
-		(at 214.92 93)
-		(descr "TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf")
-		(tags "TO-220-3 Vertical RM 2.54mm")
-		(property "Reference" "U11"
-			(at 2.54 -4.27 0)
-			(layer "F.SilkS")
-			(uuid "09ed71c2-27b6-40e9-a824-2606226d116e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "LM7805_TO220"
-			(at 2.54 2.5 0)
-			(layer "F.Fab")
-			(uuid "d53746ae-3158-4723-867b-2990482c17a2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "54fcd5eb-e840-4291-9c8c-11cb0a4a9ba7")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "eac59d62-7554-4670-8483-1ee9d9eea493")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" "Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "f4710ff7-40de-413a-821c-507f1442a63a")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property ki_fp_filters "TO?220*")
-		(path "/7478481e-d292-47f1-9f66-c3a6ca3093f9")
-		(sheetname "Root")
-		(sheetfile "logic.kicad_sch")
-		(attr through_hole)
-		(fp_line
-			(start -2.58 -3.27)
-			(end -2.58 1.371)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "cadcf660-7ba5-46b0-8212-d220841b7931")
-		)
-		(fp_line
-			(start -2.58 -3.27)
-			(end 7.66 -3.27)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "cd7732af-204a-4ece-acac-142dbf6b64e0")
-		)
-		(fp_line
-			(start -2.58 -1.76)
-			(end 7.66 -1.76)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "36f53e1b-91c5-4906-b920-4719cf59030a")
-		)
-		(fp_line
-			(start -2.58 1.371)
-			(end 7.66 1.371)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "9b9ef1d4-8877-42f4-9ef1-3d16b33eb80a")
-		)
-		(fp_line
-			(start 0.69 -3.27)
-			(end 0.69 -1.76)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "0850f3d0-83aa-4ba7-97f1-91471db4cca8")
-		)
-		(fp_line
-			(start 4.391 -3.27)
-			(end 4.391 -1.76)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "7904f9c3-2c69-4f27-b72d-1f86c0272cc9")
-		)
-		(fp_line
-			(start 7.66 -3.27)
-			(end 7.66 1.371)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "e384a9f5-3472-4386-991d-87444ed83568")
-		)
-		(fp_line
-			(start -2.71 -3.4)
-			(end -2.71 1.51)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "6643e694-e564-4ac1-bbc2-88bf59e38392")
-		)
-		(fp_line
-			(start -2.71 1.51)
-			(end 7.79 1.51)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "9a5bd90a-a40f-4caf-99a2-11214c345da3")
-		)
-		(fp_line
-			(start 7.79 -3.4)
-			(end -2.71 -3.4)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "841f086b-80d7-4739-a66d-1b9d6b1c62dc")
-		)
-		(fp_line
-			(start 7.79 1.51)
-			(end 7.79 -3.4)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "9f40974d-9e18-4ad2-988d-fcdf85d114d7")
-		)
-		(fp_line
-			(start -2.46 -3.15)
-			(end -2.46 1.25)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "af930b93-8913-429b-8913-3e82513659a6")
-		)
-		(fp_line
-			(start -2.46 -1.88)
-			(end 7.54 -1.88)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "3c9c7d8a-dc64-464c-b193-bdccbba64085")
-		)
-		(fp_line
-			(start -2.46 1.25)
-			(end 7.54 1.25)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "64577db6-cd29-410b-a84c-92c33808b2a9")
-		)
-		(fp_line
-			(start 0.69 -3.15)
-			(end 0.69 -1.88)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "befb2faa-4a7d-4661-8e63-c85e119bf84f")
-		)
-		(fp_line
-			(start 4.39 -3.15)
-			(end 4.39 -1.88)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "c2681cf8-c8bd-4cb9-975a-82f0e043d220")
-		)
-		(fp_line
-			(start 7.54 -3.15)
-			(end -2.46 -3.15)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "b91d28b4-d10c-4540-bc83-08b44787f25f")
-		)
-		(fp_line
-			(start 7.54 1.25)
-			(end 7.54 -3.15)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "14c9d2ae-ec64-4329-ae5c-ab68362f1e2e")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 2.54 -4.27 0)
-			(layer "F.Fab")
-			(uuid "76513e2b-cfa3-4c6b-8247-14a873895297")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "1" thru_hole rect
-			(at 0 0)
-			(size 1.905 2)
-			(drill 1.1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 91 "Net-(J4-Pin_10)")
-			(pinfunction "VI")
-			(pintype "power_in")
-			(uuid "81766f14-2c74-47ca-8e30-e671b83d2283")
-		)
-		(pad "2" thru_hole oval
-			(at 2.54 0)
-			(size 1.905 2)
-			(drill 1.1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 23 "GND")
-			(pinfunction "GND")
-			(pintype "power_in")
-			(uuid "9e6d58de-80f1-4b56-8b6c-429592cd6f18")
-		)
-		(pad "3" thru_hole oval
-			(at 5.08 0)
-			(size 1.905 2)
-			(drill 1.1)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net 87 "LV_REG")
-			(pinfunction "VO")
-			(pintype "power_out")
-			(uuid "da3c541d-f35c-4f4b-bcc9-e0dbe7d7485a")
-		)
-		(model "${KICAD8_3DMODEL_DIR}/Package_TO_SOT_THT.3dshapes/TO-220-3_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -9053,7 +8887,7 @@
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "af45c6f3-4ae8-4259-8ecf-cbad29b17456")
-		(at 101.68 87.07)
+		(at 237.52 80.58)
 		(descr "Through hole straight pin header, 2x05, 2.54mm pitch, double rows")
 		(tags "Through hole pin header THT 2x05 2.54mm double row")
 		(property "Reference" "J4"
