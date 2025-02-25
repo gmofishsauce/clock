@@ -633,6 +633,127 @@
 				)
 			)
 		)
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Interface_Expansion:TPIC6595"
 			(pin_names
 				(offset 0.381)
@@ -2661,16 +2782,6 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 73.66) (xy 205.74 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a61c6fb-4331-46c7-a2df-2dcd27b6eaf8")
-	)
-	(wire
-		(pts
 			(xy 21.59 39.37) (xy 139.7 39.37)
 		)
 		(stroke
@@ -2728,6 +2839,16 @@
 			(type default)
 		)
 		(uuid "94257b66-b7f1-4021-b68f-6d4f56cc8d33")
+	)
+	(wire
+		(pts
+			(xy 205.74 73.66) (xy 205.74 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94e91a7a-34c1-4d3b-b7ad-c8f72d288ed0")
 	)
 	(wire
 		(pts
@@ -2981,6 +3102,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 95.25) (xy 205.74 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df4e97c0-afb1-40d0-9994-851661ae1399")
+	)
+	(wire
+		(pts
 			(xy 223.52 31.75) (xy 223.52 57.15)
 		)
 		(stroke
@@ -3130,6 +3261,76 @@
 		(uuid "fc191903-701e-435e-bcad-2c1f294dce0b")
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 205.74 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "095f698b-e487-4b4a-9690-3a3fc6432a43")
+		(property "Reference" "R1"
+			(at 208.28 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R"
+			(at 208.28 92.7099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal"
+			(at 203.962 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 205.74 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 205.74 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ab81ffaf-4545-4365-999b-279a154d3c9d")
+		)
+		(pin "1"
+			(uuid "c9ffcdca-831a-40b5-bcaf-cf391878c504")
+		)
+		(instances
+			(project ""
+				(path "/2149644b-a7a7-4a4b-a38a-471f6dd87e38"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "NixComp:NCH8200HV_170v")
 		(at 86.36 105.41 0)
 		(mirror x)
@@ -3155,7 +3356,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads"
+		(property "Footprint" "NixComp:NCH8200HV_Socket_LongPads"
 			(at 87.63 105.41 0)
 			(effects
 				(font
@@ -3470,10 +3671,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "0c4c114e-6f82-403b-a07e-8ce8d40c0e3a")
+			(uuid "0c4c114e-6f82-403b-a07e-8ce8d40c0e3b")
 		)
 		(pin "1"
-			(uuid "d4484b6b-10cc-43a5-a5dd-840c87cf850f")
+			(uuid "d4484b6b-10cc-43a5-a5dd-840c87cf8510")
 		)
 		(instances
 			(project ""
@@ -3933,10 +4134,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "0c4c114e-6f82-403b-a07e-8ce8d40c0e3a")
+			(uuid "0c4c114e-6f82-403b-a07e-8ce8d40c0e3c")
 		)
 		(pin "1"
-			(uuid "d4484b6b-10cc-43a5-a5dd-840c87cf850f")
+			(uuid "d4484b6b-10cc-43a5-a5dd-840c87cf8511")
 		)
 		(instances
 			(project ""
@@ -4258,10 +4459,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "0c4c114e-6f82-403b-a07e-8ce8d40c0e3a")
+			(uuid "0c4c114e-6f82-403b-a07e-8ce8d40c0e3d")
 		)
 		(pin "1"
-			(uuid "d4484b6b-10cc-43a5-a5dd-840c87cf850f")
+			(uuid "d4484b6b-10cc-43a5-a5dd-840c87cf8512")
 		)
 		(instances
 			(project ""
