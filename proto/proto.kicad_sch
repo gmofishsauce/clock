@@ -3856,7 +3856,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+		(property "Footprint" "NixComp:PinHeader_1x05_P2.54mm_Vertical_SmallCourt"
 			(at 35.56 97.79 0)
 			(effects
 				(font
@@ -4003,7 +4003,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+		(property "Footprint" "NixComp:PinHeader_1x05_P2.54mm_Vertical_SmallCourt"
 			(at 82.55 57.15 0)
 			(effects
 				(font
@@ -4299,7 +4299,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+		(property "Footprint" "NixComp:PinHeader_1x05_P2.54mm_Vertical_SmallCourt"
 			(at 149.86 86.36 0)
 			(effects
 				(font
@@ -4327,19 +4327,19 @@
 			)
 		)
 		(pin "2"
-			(uuid "1c7ce227-3517-40d3-a5f2-df8d10db0773")
+			(uuid "1c7ce227-3517-40d3-a5f2-df8d10db0774")
 		)
 		(pin "3"
-			(uuid "d87630d6-de56-4a1f-a139-f6d5a75f7d90")
+			(uuid "d87630d6-de56-4a1f-a139-f6d5a75f7d91")
 		)
 		(pin "4"
-			(uuid "ff703da6-5013-4971-9426-f33d664a5c2b")
+			(uuid "ff703da6-5013-4971-9426-f33d664a5c2c")
 		)
 		(pin "5"
-			(uuid "fbf62020-3042-495f-a67f-6454505a2977")
+			(uuid "fbf62020-3042-495f-a67f-6454505a2978")
 		)
 		(pin "1"
-			(uuid "34631bc2-38a7-486b-b424-400b68d3d8b3")
+			(uuid "34631bc2-38a7-486b-b424-400b68d3d8b4")
 		)
 		(instances
 			(project ""
@@ -4447,7 +4447,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+		(property "Footprint" "NixComp:PinHeader_1x05_P2.54mm_Vertical_SmallCourt"
 			(at 149.86 101.6 0)
 			(effects
 				(font
@@ -4475,19 +4475,19 @@
 			)
 		)
 		(pin "2"
-			(uuid "1c7ce227-3517-40d3-a5f2-df8d10db0773")
+			(uuid "1c7ce227-3517-40d3-a5f2-df8d10db0775")
 		)
 		(pin "3"
-			(uuid "d87630d6-de56-4a1f-a139-f6d5a75f7d90")
+			(uuid "d87630d6-de56-4a1f-a139-f6d5a75f7d92")
 		)
 		(pin "4"
-			(uuid "ff703da6-5013-4971-9426-f33d664a5c2b")
+			(uuid "ff703da6-5013-4971-9426-f33d664a5c2d")
 		)
 		(pin "5"
-			(uuid "fbf62020-3042-495f-a67f-6454505a2977")
+			(uuid "fbf62020-3042-495f-a67f-6454505a2979")
 		)
 		(pin "1"
-			(uuid "34631bc2-38a7-486b-b424-400b68d3d8b3")
+			(uuid "34631bc2-38a7-486b-b424-400b68d3d8b5")
 		)
 		(instances
 			(project ""
