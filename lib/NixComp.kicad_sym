@@ -3193,7 +3193,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "NCH8200HV"
 			(at -0.635 7.62 0)
 			(effects
 				(font
@@ -3241,10 +3241,10 @@
 					(type background)
 				)
 			)
-			(pin power_in line
-				(at -10.16 5.08 0)
+			(pin power_out line
+				(at -10.16 3.81 0)
 				(length 2.54)
-				(name "LV_IN"
+				(name "HV_OUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3260,9 +3260,9 @@
 				)
 			)
 			(pin power_in line
-				(at -10.16 0 0)
+				(at -10.16 -3.81 0)
 				(length 2.54)
-				(name "LGND"
+				(name "LV_IN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3278,9 +3278,9 @@
 				)
 			)
 			(pin power_in line
-				(at 8.89 -5.08 180)
+				(at 8.89 -3.81 180)
 				(length 2.54)
-				(name "PGND"
+				(name "LGND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3295,10 +3295,10 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 8.89 5.08 180)
+			(pin power_in line
+				(at 8.89 3.81 180)
 				(length 2.54)
-				(name "HV_OUT"
+				(name "PGND"
 					(effects
 						(font
 							(size 1.27 1.27)
