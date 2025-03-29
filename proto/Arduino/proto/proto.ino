@@ -36,23 +36,33 @@ void disableOutput() {
 
 void clearSR() {
   digitalWrite(SRCLR_LOW, 0);
+  delayMicroseconds(5);
   digitalWrite(SRCLR_LOW, 1);
 }
 
 void clockSR() {
   digitalWrite(SRCK, 0);
+  delayMicroseconds(5);
   digitalWrite(SRCK, 1);
 }
 
 void clockRegister() {
   digitalWrite(RCLK, 0);
+  delayMicroseconds(5);
   digitalWrite(RCLK, 1);
 
 }
 
-void clockBit(int bit) {
-  digitalWrite(COPI, bit);
+void clockBit(int state) {
+  digitalWrite(COPI, state);
   clockSR();
+}
+
+void setDefaults() {
+  disableOutput();
+  digitalWrite(SRCK, 1);
+  digitalWrite(RCLK, 1);
+  clearSR();
 }
 
 void printMillis(void) {
@@ -70,7 +80,7 @@ void printMillis(long t) {
 // BUILD_PURPOSE == 2 => empty setup and loop (check initialization)
 // BUILD_PURPOSE == 3 => clock out a single digit and then wait
 
-#define BUILD_PURPOSE 2
+#define BUILD_PURPOSE 3
 
 #if BUILD_PURPOSE == 1
 
@@ -107,10 +117,51 @@ void loop() {
 
 #elif BUILD_PURPOSE == 2
 
+// Intentionally empty setup and loop
 void setup() {
 }
 
 void loop() {
+}
+
+#elif BUILD_PURPOSE == 3
+
+// Display a digit
+
+void setup() {
+  pinMode(RCLK, OUTPUT);
+  pinMode(COPI, OUTPUT);
+  pinMode(SRCK, OUTPUT);
+  pinMode(SRCLR_LOW, OUTPUT);
+  pinMode(OUTEN_LOW, OUTPUT);
+
+  setDefaults();
+}
+
+static int nextBit = 0;
+static int bits[] = { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80 };
+static int num_bits = sizeof(bits) / sizeof(int);
+
+// Everything is MSB first. The argument is a byte stored in an int.
+void byteOut(int b) {
+  clearSR();
+  clockRegister();
+  for (int i = 0; i < 8; ++i) {
+    int state = ((b << i) & 0x80) ? HIGH : LOW;
+    clockBit(state);
+  }
+  clockRegister();
+}
+
+void loop() {
+  delay(1000);
+  enableOutput();
+
+  if (nextBit >= num_bits) {
+    nextBit = 0;
+  }
+  byteOut(bits[nextBit]);
+  nextBit++;
 }
 
 #else
