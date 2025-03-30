@@ -20,6 +20,8 @@
 // All the bit-banging functions assume that pins D7, 8, 9, 11, and 12
 // have been initialized as outputs. There are no inputs.
 
+#include <SPI.h>
+
 #define RCLK      7
 #define COPI      8
 #define SRCK      9
@@ -36,13 +38,13 @@ void disableOutput() {
 
 void clearSR() {
   digitalWrite(SRCLR_LOW, 0);
-  delayMicroseconds(5);
+  //delayMicroseconds(5);
   digitalWrite(SRCLR_LOW, 1);
 }
 
 void clockSR() {
   digitalWrite(SRCK, 0);
-  delayMicroseconds(5);
+  //delayMicroseconds(5);
   digitalWrite(SRCK, 1);
 }
 
@@ -79,6 +81,7 @@ void printMillis(long t) {
 // BUILD_PURPOSE == 1 => slowly toggle all controls (1 / 5 seconds)
 // BUILD_PURPOSE == 2 => empty setup and loop (check initialization)
 // BUILD_PURPOSE == 3 => clock out a single digit and then wait
+// BUILD_PURPOSE == 4 => SPI library (currently does not work)
 
 #define BUILD_PURPOSE 3
 
@@ -162,6 +165,39 @@ void loop() {
   }
   byteOut(bits[nextBit]);
   nextBit++;
+}
+
+#elif BUILD_PURPOSE == 4 // SPI library
+
+#define MILLION (1000*1000)
+
+static int nextBit = 0;
+static uint16_t bits[] = { 0x0101, 0x0202, 0x0404, 0x0808, 0x1010, 0x2020, 0x4040, 0x8080 };
+static int num_bits = sizeof(bits) / sizeof(int);
+
+void setup() {
+  pinMode(RCLK, OUTPUT);
+  pinMode(COPI, OUTPUT);
+  pinMode(SRCK, OUTPUT);
+  pinMode(SRCLR_LOW, OUTPUT);
+  pinMode(OUTEN_LOW, OUTPUT);
+
+  clearSR();
+  clockRegister();
+
+  SPI.begin();
+}
+
+void loop() {
+  delay(1000);
+  enableOutput();
+
+  printMillis();
+  SPI.beginTransaction(SPISettings(1000, MSBFIRST, SPI_MODE0));
+  SPI.transfer(bits[nextBit]);
+  SPI.endTransaction();
+
+  nextBit = (nextBit + 1) % num_bits;
 }
 
 #else
