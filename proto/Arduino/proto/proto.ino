@@ -50,9 +50,8 @@ void clockSR() {
 
 void clockRegister() {
   digitalWrite(RCLK, 0);
-  delayMicroseconds(5);
+  //delayMicroseconds(5);
   digitalWrite(RCLK, 1);
-
 }
 
 void clockBit(int state) {
@@ -83,7 +82,7 @@ void printMillis(long t) {
 // BUILD_PURPOSE == 3 => clock out a single digit and then wait
 // BUILD_PURPOSE == 4 => SPI library (currently does not work)
 
-#define BUILD_PURPOSE 3
+#define BUILD_PURPOSE 4
 
 #if BUILD_PURPOSE == 1
 
@@ -192,11 +191,12 @@ void loop() {
   delay(1000);
   enableOutput();
 
-  printMillis();
+  //printMillis();
   SPI.beginTransaction(SPISettings(1000, MSBFIRST, SPI_MODE0));
   SPI.transfer(bits[nextBit]);
   SPI.endTransaction();
 
+  clockRegister();
   nextBit = (nextBit + 1) % num_bits;
 }
 
