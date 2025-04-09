@@ -82,7 +82,7 @@ void printMillis(long t) {
 // BUILD_PURPOSE == 3 => clock out a single digit and then wait
 // BUILD_PURPOSE == 4 => SPI library (currently does not work)
 
-#define BUILD_PURPOSE 4
+#define BUILD_PURPOSE 3
 
 #if BUILD_PURPOSE == 1
 
@@ -141,7 +141,7 @@ void setup() {
 }
 
 static int nextBit = 0;
-static int bits[] = { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80 };
+static int bits[] = { 0x01, /* 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x00, 0x00, 0x00, 0x00 */ };
 static int num_bits = sizeof(bits) / sizeof(int);
 
 // Everything is MSB first. The argument is a byte stored in an int.
