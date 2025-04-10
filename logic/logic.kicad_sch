@@ -15677,7 +15677,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67d8484d-771d-452d-a105-ed1bfb958348")
-		(property "Reference" "R2"
+		(property "Reference" "R3"
 			(at 80.01 184.1499 0)
 			(effects
 				(font
@@ -15731,7 +15731,7 @@
 		(instances
 			(project "logic"
 				(path "/4078bfcf-e5c1-4f0e-b66f-b232c5a6fa8f"
-					(reference "R2")
+					(reference "R3")
 					(unit 1)
 				)
 			)
