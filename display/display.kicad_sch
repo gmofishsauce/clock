@@ -10395,7 +10395,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 75.692 93.98 90)
 			(effects
 				(font
@@ -10562,7 +10562,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 224.282 93.98 90)
 			(effects
 				(font
@@ -10729,7 +10729,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 165.862 54.61 90)
 			(effects
 				(font
@@ -10798,7 +10798,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 66.802 93.98 90)
 			(effects
 				(font
@@ -10867,7 +10867,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 209.042 93.98 90)
 			(effects
 				(font
@@ -10917,16 +10917,14 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "33ed8a7a-274e-48d5-baaa-caddc12c3254")
 		(property "Reference" "J1"
-			(at 86.36 110.4899 90)
+			(at 213.36 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 		(property "Value" "DIN41612_03x32_ABC"
@@ -11290,7 +11288,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 216.662 93.98 90)
 			(effects
 				(font
@@ -11359,7 +11357,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 123.952 54.61 90)
 			(effects
 				(font
@@ -11428,7 +11426,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 35.052 54.61 90)
 			(effects
 				(font
@@ -11497,7 +11495,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 207.772 54.61 90)
 			(effects
 				(font
@@ -11664,7 +11662,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 231.902 93.98 90)
 			(effects
 				(font
@@ -11929,7 +11927,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 80.772 54.61 90)
 			(effects
 				(font
@@ -11998,7 +11996,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm"
+		(property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm"
 			(at 249.682 54.61 90)
 			(effects
 				(font
