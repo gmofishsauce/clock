@@ -781,7 +781,7 @@
 			(pintype "passive")
 			(uuid "691da024-eca7-4095-809a-e476929e343f")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1018,7 +1018,7 @@
 			(pintype "passive")
 			(uuid "da153096-fc1a-44a3-ae82-dbd87fe0fa31")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1255,7 +1255,7 @@
 			(pintype "passive")
 			(uuid "0f8352cc-8b46-4d47-bc6f-8bfd50d229b6")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1275,7 +1275,7 @@
 		(descr "Resistor, Box series, Radial, pin pitch=9.00mm, 2W, length*width=13.0*4.0mm^2, http://www.produktinfo.conrad.com/datenblaetter/425000-449999/443860-da-01-de-METALLBAND_WIDERSTAND_0_1_OHM_5W_5Pr.pdf")
 		(tags "Resistor Box series Radial pin pitch 9.00mm 2W length 13.0mm width 4.0mm")
 		(property "Reference" "R11"
-			(at 4.58 3.14 -90)
+			(at 4.58 3.14 90)
 			(layer "F.SilkS")
 			(uuid "b0436090-f8d9-411e-8573-c546153ecb4f")
 			(effects
@@ -1286,7 +1286,7 @@
 			)
 		)
 		(property "Value" "15K"
-			(at 4.5 3.25 -90)
+			(at 4.5 3.25 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e4879eb9-1a40-40dc-9a19-f8a3916c6cae")
@@ -1462,7 +1462,7 @@
 			(uuid "e6852f50-3cb1-4eb9-9dbb-edf6b6558b73")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 4.5 0 -90)
+			(at 4.5 0 90)
 			(layer "F.Fab")
 			(uuid "6fb65be7-ef6a-4936-bd29-93590d3a1a42")
 			(effects
@@ -1492,7 +1492,7 @@
 			(pintype "passive")
 			(uuid "7ff7a0b3-5970-4e2c-8751-d100614e4ac9")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1729,7 +1729,7 @@
 			(pintype "passive")
 			(uuid "02dec4c4-4fa8-44c6-a68f-72284e66bb59")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1966,7 +1966,7 @@
 			(pintype "passive")
 			(uuid "7c970411-dc06-49e1-9a1f-0ac29b3a25dd")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2203,7 +2203,7 @@
 			(pintype "passive")
 			(uuid "4133303d-f9d0-4292-981d-81bb3a07c419")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3445,7 +3445,7 @@
 			(pintype "passive")
 			(uuid "8e2b0fde-252e-4c43-bd8b-1b59fa9d2699")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4017,7 +4017,7 @@
 			(pintype "passive")
 			(uuid "1e8f1554-4ba1-42fb-91ff-5947e006914e")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4037,7 +4037,7 @@
 		(descr "Resistor, Box series, Radial, pin pitch=9.00mm, 2W, length*width=13.0*4.0mm^2, http://www.produktinfo.conrad.com/datenblaetter/425000-449999/443860-da-01-de-METALLBAND_WIDERSTAND_0_1_OHM_5W_5Pr.pdf")
 		(tags "Resistor Box series Radial pin pitch 9.00mm 2W length 13.0mm width 4.0mm")
 		(property "Reference" "R10"
-			(at 4.6 3.09 -90)
+			(at 4.6 3.09 90)
 			(layer "F.SilkS")
 			(uuid "43e3c161-6058-4dfc-94a9-4c36b6254e26")
 			(effects
@@ -4048,7 +4048,7 @@
 			)
 		)
 		(property "Value" "15K"
-			(at 4.5 3.25 -90)
+			(at 4.5 3.25 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "67615e68-acdb-4545-8579-37ab511acfce")
@@ -4224,7 +4224,7 @@
 			(uuid "9977a276-efd6-4ce3-9f57-704031e76931")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 4.5 0 -90)
+			(at 4.5 0 90)
 			(layer "F.Fab")
 			(uuid "fb12574d-f79b-452d-8f6e-33894b86de70")
 			(effects
@@ -4254,7 +4254,7 @@
 			(pintype "passive")
 			(uuid "d7b5f410-f1ba-49c6-8804-179df485042e")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4274,7 +4274,7 @@
 		(descr "Resistor, Box series, Radial, pin pitch=9.00mm, 2W, length*width=13.0*4.0mm^2, http://www.produktinfo.conrad.com/datenblaetter/425000-449999/443860-da-01-de-METALLBAND_WIDERSTAND_0_1_OHM_5W_5Pr.pdf")
 		(tags "Resistor Box series Radial pin pitch 9.00mm 2W length 13.0mm width 4.0mm")
 		(property "Reference" "R9"
-			(at 4.52 3.19 -90)
+			(at 4.52 3.19 90)
 			(layer "F.SilkS")
 			(uuid "cc923454-d461-4951-ae85-e5afecb524c9")
 			(effects
@@ -4285,7 +4285,7 @@
 			)
 		)
 		(property "Value" "15K"
-			(at 4.5 3.25 -90)
+			(at 4.5 3.25 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "003c4db8-37f6-4ac3-8cd6-e2adc5ee662e")
@@ -4461,7 +4461,7 @@
 			(uuid "6f04d2d7-739f-40fd-81c4-6a7bfb6d7b5a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 4.5 0 -90)
+			(at 4.5 0 90)
 			(layer "F.Fab")
 			(uuid "a54bb444-c886-4817-bb56-54cda1e8bd28")
 			(effects
@@ -4491,7 +4491,7 @@
 			(pintype "passive")
 			(uuid "b079f539-a12c-4930-bfaa-93545fbb3ead")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4846,7 +4846,7 @@
 		(descr "Resistor, Box series, Radial, pin pitch=9.00mm, 2W, length*width=13.0*4.0mm^2, http://www.produktinfo.conrad.com/datenblaetter/425000-449999/443860-da-01-de-METALLBAND_WIDERSTAND_0_1_OHM_5W_5Pr.pdf")
 		(tags "Resistor Box series Radial pin pitch 9.00mm 2W length 13.0mm width 4.0mm")
 		(property "Reference" "R12"
-			(at 4.45 2.99 -90)
+			(at 4.45 2.99 90)
 			(layer "F.SilkS")
 			(uuid "7e0bc3f5-6a14-4f7f-8ca9-329913f34a79")
 			(effects
@@ -4857,7 +4857,7 @@
 			)
 		)
 		(property "Value" "15K"
-			(at 4.5 3.25 -90)
+			(at 4.5 3.25 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ed2decac-f36f-408c-8600-6c8ae9dd3f58")
@@ -5033,7 +5033,7 @@
 			(uuid "a87469fa-895a-4e21-a35e-5a8921d8e56c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 4.5 0 -90)
+			(at 4.5 0 90)
 			(layer "F.Fab")
 			(uuid "c8bf338f-be5f-44dc-af90-fe7377e08448")
 			(effects
@@ -5063,7 +5063,7 @@
 			(pintype "passive")
 			(uuid "efa7452a-9a9a-452c-8727-dbfca6208e0d")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Box_L13.0mm_W4.0mm_P9.00mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6934,7 +6934,7 @@
 			(pintype "passive")
 			(uuid "8fb0f6b1-2d3a-4b5a-a546-dee078d292bf")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Connector_DIN.3dshapes/DIN41612_R_3x32_Female_Horizontal_THT.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_DIN.3dshapes/DIN41612_C_3x32_Male_Horizontal_THT.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -16810,17 +16810,6 @@
 				(xy 189.820186 117.948835) (xy 190.003007 117.820822) (xy 190.160822 117.663007) (xy 190.288835 117.480186)
 				(xy 190.337618 117.375569) (xy 190.38379 117.32313) (xy 190.450983 117.303978)
 			)
-		)
-	)
-	(group ""
-		(uuid "29e5c154-068d-4313-9f85-8bbb1f18302e")
-		(locked yes)
-		(members "1c89420d-b0f8-4b80-a07e-464fc83c2dfe" "2fcf013a-4b26-464c-ad14-ae8529e43dcf"
-			"386c7d94-2b33-4643-b4aa-ff7fda262479" "47299dc9-711e-43cd-9e86-3aa28dd7906f"
-			"4ef7d8fd-ea49-4047-abf0-82dde09c5848" "51c62831-59be-43f3-8609-425647476f07"
-			"6a8788c7-c95e-41c3-be04-fdc7e279cbf2" "82d8cd09-b0bb-4fc0-b843-1b7bc8198e13"
-			"929fba77-5428-4602-b7d1-989fc6aa0b02" "ae29b370-8ffe-420c-8e4f-58b496252068"
-			"cbc70221-7eb9-43a5-a192-533ffd466c74" "eae34962-af6f-412a-ac98-6b5bf6c11a83"
 		)
 	)
 )
