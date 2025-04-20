@@ -137,9 +137,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "Gerbers/")
 		)
 	)
 	(net 0 "")
@@ -11507,7 +11507,6 @@
 		(polygon
 			(pts
 				(xy 233.19 62.01) (xy 233.19 121.48) (xy 232.83 121.84) (xy 71.51 121.84) (xy 71.51 62.01) (xy 71.54 62.01)
-				(xy 71.54 62.01)
 			)
 		)
 		(filled_polygon
