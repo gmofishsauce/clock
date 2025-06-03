@@ -1,56 +1,21 @@
-// Arduino support for Nixie tube PROTOTYPE (one tube)
-// 
-// Wiring of pins on the LS244 buffer chip in the prototype:
-// The LS244 is the 3.3v => 5v converter
-//
-// D8/MOSI/COPI => LS244-2  => LS244-18 => J1-1 => SER_IN (6595 pin 3)
-// D9/SCK       => LS244-4  => LS244-16 => J1-2 => SRCK (6595 pin 13)
-// D11/SDA      => LS244-6  => LS244-14 => J1-3 => SRCLR# (6596 pin 8)
-// D7           => LS244-8  => LS244-12 => J1-4 => RCLK (6595 pin 12)
-// D12/SCL      => LS244-11 => LS244-9  => J1-5 => GATE# (6595 pin 9)
-//
-// Mapping of Arduino logic pins to functions:
-//
-// D7 low => high clocks shift register content into output register
-// D8 is the serial bit input to the shift register
-// D9 low => high clocks the bit on D8 into the shift register
-// D11 low clear holds the shift register clear
-// D12 high holds the outputs disabled (nonconducting)
-//
-// All the bit-banging functions assume that pins D7, 8, 9, 11, and 12
-// have been initialized as outputs. There are no inputs.
-
-#include <SPI.h>
-
-#define RCLK      7
 #define COPI      8
 #define SRCK      9
-#define SRCLR_LOW 11
-#define OUTEN_LOW 12
-
-void enableOutput() {
-  digitalWrite(OUTEN_LOW, 0);
-}
-
-void disableOutput() {
-  digitalWrite(OUTEN_LOW, 1);
-}
+#define RCLK      A1
+#define SRCLR     7
 
 void clearSR() {
-  digitalWrite(SRCLR_LOW, 0);
-  //delayMicroseconds(5);
-  digitalWrite(SRCLR_LOW, 1);
+  Serial.println("SHIFT REGISTER CLEARED");
+  digitalWrite(SRCLR, 0);
+  digitalWrite(SRCLR, 1);
 }
 
 void clockSR() {
   digitalWrite(SRCK, 0);
-  //delayMicroseconds(5);
   digitalWrite(SRCK, 1);
 }
 
 void clockRegister() {
   digitalWrite(RCLK, 0);
-  //delayMicroseconds(5);
   digitalWrite(RCLK, 1);
 }
 
@@ -60,7 +25,6 @@ void clockBit(int state) {
 }
 
 void setDefaults() {
-  disableOutput();
   digitalWrite(SRCK, 1);
   digitalWrite(RCLK, 1);
   clearSR();
@@ -73,135 +37,108 @@ void printMillis(void) {
 
 void printMillis(long t) {
   char buffer[64];
-  (void) sprintf(buffer, "Running %ld", t);
+  (void) sprintf(buffer, "running %ld", t);
   Serial.println(buffer);
 }
 
-// BUILD_PURPOSE == 1 => slowly toggle all controls (1 / 5 seconds)
-// BUILD_PURPOSE == 2 => empty setup and loop (check initialization)
-// BUILD_PURPOSE == 3 => clock out a single digit and then wait
-// BUILD_PURPOSE == 4 => SPI library (currently does not work)
-
-#define BUILD_PURPOSE 3
-
-#if BUILD_PURPOSE == 1
-
-static int LEDstate;
 void setup() {
-  long t = millis();
-  pinMode(7, OUTPUT);
-  pinMode(8, OUTPUT);
-  pinMode(9, OUTPUT);
-  pinMode(11, OUTPUT);
-  pinMode(12, OUTPUT);
-
   Serial.begin(115200);
   while (!Serial) {
     ;
   }
-  printMillis(t);
-
-}
-
-// This version of loop() allows checking that all 5 control signals
-// go to a solid low and a solid high using just a digital meter.
-void loop() {
+  Serial.println("start: ");
   printMillis();
-  LEDstate = 1 - LEDstate;
-  digitalWrite(LED_BUILTIN, LEDstate);
-  digitalWrite(7, LEDstate);
-  digitalWrite(8, LEDstate);
-  digitalWrite(9, LEDstate);
-  digitalWrite(11, LEDstate);
-  digitalWrite(12, LEDstate);
-  delay(5000);
-}
 
-#elif BUILD_PURPOSE == 2
-
-// Intentionally empty setup and loop
-void setup() {
-}
-
-void loop() {
-}
-
-#elif BUILD_PURPOSE == 3
-
-// Display a digit
-
-void setup() {
   pinMode(RCLK, OUTPUT);
   pinMode(COPI, OUTPUT);
   pinMode(SRCK, OUTPUT);
-  pinMode(SRCLR_LOW, OUTPUT);
-  pinMode(OUTEN_LOW, OUTPUT);
-
+  pinMode(SRCLR, OUTPUT);
   setDefaults();
 }
 
-static int nextBit = 0;
-static int bits[] = { 0x01, /* 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x00, 0x00, 0x00, 0x00 */ };
-static int num_bits = sizeof(bits) / sizeof(int);
+/*
+Overall note:
+
+The labeling on the KiCad schematic is completely screwed up. The problem
+probably originated when I found that mounting the display board's 96-pin
+connector to the back of the display board improved the component spacing.
+
+
+On the logic board:
+
+There are 8 buses, each 8 bits, for a total of 64 control bits.
+The control bits have to be shifted out serially, MSB of each bus first.
+The order of the 8-bit buses is B4, B3, B2, B1; B8, B7, B6, B5.
+
+There are 96 connector pins numbered A1-A32, B1-B32, and C1-C32.
+The entire "B" row carries power and ground, leaving 64 signal pins.
+Do not confuse the display board "B" buses with the connector "B" row.
+Connector pin A1 is at B4-0, A2 is at B4-1, etc; A32 is at B1-7.
+Connector pin C1 is at B5-0, C2 is at B5-1, etc; C32 is at B8-7.
+
+On the display board:
+
+Each row ("A" or "C") in the connector runs to three of the six tubes
+The "A" row runs to the minutes' ones and the seconds tubes.
+The "C" row runs to the hours tubes and the minutes' tens
+
+
+The shunts (tube darkener bits) are A1, A2, C31, and C32.
+A1 (B5-0) darkens the hours' ones tube
+A2 (B5-1) darkens the hours' tens tube (usually dark in 12 hour mode)
+C31 (B1-6) darkens both minutes tubes
+C32 (B1-7) darkens both seconds tubes
+There is no way to individually darken minutes or seconds tubes.
+*/
+byte buf[8];
+
+#define B1  3
+#define B2  2
+#define B3  1
+#define B4  0
+#define B8  4
+#define B7  5
+#define B6  6
+#define B5  7
+
+#define BIT(n) (1<<n)
 
 // Everything is MSB first. The argument is a byte stored in an int.
 void byteOut(int b) {
-  clearSR();
-  clockRegister();
   for (int i = 0; i < 8; ++i) {
     int state = ((b << i) & 0x80) ? HIGH : LOW;
     clockBit(state);
   }
-  clockRegister();
 }
 
-void loop() {
-  delay(1000);
-  enableOutput();
-
-  if (nextBit >= num_bits) {
-    nextBit = 0;
+void bufOut(byte *pb) {
+  for (int i = 0; i < 8; ++i, ++pb) {
+    byteOut(*pb);
   }
-  byteOut(bits[nextBit]);
-  nextBit++;
-}
-
-#elif BUILD_PURPOSE == 4 // SPI library
-
-#define MILLION (1000*1000)
-
-static int nextBit = 0;
-static uint16_t bits[] = { 0x0101, 0x0202, 0x0404, 0x0808, 0x1010, 0x2020, 0x4040, 0x8080 };
-static int num_bits = sizeof(bits) / sizeof(int);
-
-void setup() {
-  pinMode(RCLK, OUTPUT);
-  pinMode(COPI, OUTPUT);
-  pinMode(SRCK, OUTPUT);
-  pinMode(SRCLR_LOW, OUTPUT);
-  pinMode(OUTEN_LOW, OUTPUT);
-
-  clearSR();
   clockRegister();
-
-  SPI.begin();
 }
 
 void loop() {
-  delay(1000);
-  enableOutput();
+  for(;;) {
+    printMillis();
 
-  //printMillis();
-  SPI.beginTransaction(SPISettings(1000, MSBFIRST, SPI_MODE0));
-  SPI.transfer(bits[nextBit]);
-  SPI.endTransaction();
+    for(int i = 0; i < 8; ++i) { buf[i] = 0x00; }
+    bufOut(buf);
+    Serial.println("All bits off, including darkener bits");
+    delay(8000);
 
-  clockRegister();
-  nextBit = (nextBit + 1) % num_bits;
+    // FACT: B1-7 turns on the "9" filament in the seconds' units.
+    // B1-6 turns on the "8" filament.
+    for(int i = 0; i < 8; ++i) { buf[i] = 0x00; }
+    buf[B1] = BIT(6);
+    bufOut(buf);
+    Serial.println("One filament lit in seconds tube");
+    delay(8000);
+
+    for(int i = 0; i < 8; ++i) { buf[i] = 0x00; }
+    buf[B8] = 0x81;
+    bufOut(buf);
+    Serial.println("Seconds darkener enabled");
+    delay(8000);
+  }
 }
-
-#else
-#error BUILD_PURPOSE is not set
-#endif
-
-
