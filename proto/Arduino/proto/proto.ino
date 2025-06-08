@@ -56,40 +56,6 @@ void setup() {
   setDefaults();
 }
 
-/*
-Overall note:
-
-The labeling on the KiCad schematic is completely screwed up. The problem
-probably originated when I found that mounting the display board's 96-pin
-connector to the back of the display board improved the component spacing.
-
-
-On the logic board:
-
-There are 8 buses, each 8 bits, for a total of 64 control bits.
-The control bits have to be shifted out serially, MSB of each bus first.
-The order of the 8-bit buses is B4, B3, B2, B1; B8, B7, B6, B5.
-
-There are 96 connector pins numbered A1-A32, B1-B32, and C1-C32.
-The entire "B" row carries power and ground, leaving 64 signal pins.
-Do not confuse the display board "B" buses with the connector "B" row.
-Connector pin A1 is at B4-0, A2 is at B4-1, etc; A32 is at B1-7.
-Connector pin C1 is at B5-0, C2 is at B5-1, etc; C32 is at B8-7.
-
-On the display board:
-
-Each row ("A" or "C") in the connector runs to three of the six tubes
-The "A" row runs to the minutes' ones and the seconds tubes.
-The "C" row runs to the hours tubes and the minutes' tens
-
-
-The shunts (tube darkener bits) are A1, A2, C31, and C32.
-A1 (B5-0) darkens the hours' ones tube
-A2 (B5-1) darkens the hours' tens tube (usually dark in 12 hour mode)
-C31 (B1-6) darkens both minutes tubes
-C32 (B1-7) darkens both seconds tubes
-There is no way to individually darken minutes or seconds tubes.
-*/
 byte buf[8];
 
 #define B1  3
